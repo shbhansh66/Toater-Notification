@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toaster notification</title>
-<link rel="stylesheet" href="./src/output.css">
-</head>
-<body>
-<div class="parent items-start m-4 gap-2 flex flex-col   ">
-        
-    
-</div>
-<script>
-
-   function showToaster(config){
+ function showToaster(config){
       return function(notification){
         const div=document.createElement("div");
         div.className=` bg-${config.bgColor} text-${config.textColor} bg-gray-200 p-5 rounded-lg  shadow-lg text-1xl font-bold`;
@@ -39,9 +24,9 @@ const toaster=showToaster({
 
 toaster("Download done");
 setTimeout(()=>{
-    toaster("Your request accepted");
+    toaster("Your request accepted !");
 },2000)
 
-</script>
-</body>
-</html>
+setTimeout(()=>{
+    toaster("Successfully logged in !");
+},3000)
